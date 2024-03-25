@@ -1,5 +1,5 @@
 import { api } from '@/api/service/endpoints'
-import post from '@/api/service/post'
+import { post } from '@/api/service/post'
 import {
   IUserAuth as IUserAuthData,
   IUserInfo as IUserInfoData,

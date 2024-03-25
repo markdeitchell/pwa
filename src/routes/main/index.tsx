@@ -16,6 +16,11 @@ const PageMain = () => {
           </Link>
         </div>
         <div className='col text-center'>
+          <Link to={'webauthn'}>
+            <span className='btn btn-primary text-light'>Webauthn</span>
+          </Link>
+        </div>
+        <div className='col text-center'>
           <Link to={'api'}>
             <span className='btn btn-primary text-light'>Api</span>
           </Link>

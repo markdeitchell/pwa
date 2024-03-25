@@ -12,6 +12,7 @@ import { Provider } from 'react-redux'
 import PageAuth from './routes/auth'
 import { useStartupRequestUserInfo } from './utils/useStartupRequestUserInfo'
 import { useCreateDevicePushToken } from './utils/useCreateDevicePushToken'
+import PageWebauthn from './routes/webauthn'
 
 function App() {
   useStartupRequestUserInfo()
@@ -34,6 +35,10 @@ function App() {
       path: '/auth',
       element: <PageAuth />
     },
+    {
+      path: '/webauthn',
+      element: <PageWebauthn />
+    }
   ])
 
   return (
