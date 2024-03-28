@@ -1,15 +1,7 @@
-import { IUserInfo } from '@/ts/requests/responses/IUser'
-
-interface IUser {
-  loading: boolean,
-  info: IUserInfo | null
-}
-
-interface IPush {
+interface ISession {
 
 }
 
 export interface IStore {
-  user: IUser,
-  push: IPush
+  session: ISession
 }

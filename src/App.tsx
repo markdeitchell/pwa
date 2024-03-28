@@ -5,44 +5,18 @@ import {
 } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { store } from '@/store/_store'
-import PageApi from './routes/api'
-import PageImages from './routes/images'
-import PageMain from './routes/main'
 import { Provider } from 'react-redux'
-import PageAuth from './routes/auth'
-import { useStartupRequestUserInfo } from './utils/useStartupRequestUserInfo'
-import { useCreateDevicePushToken } from './utils/useCreateDevicePushToken'
-import PageWebauthn from './routes/webauthn'
 
 function App() {
-  useStartupRequestUserInfo()
-  useCreateDevicePushToken()
-
   const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <PageMain />
-    },
-    {
-      path: '/api',
-      element: <PageApi />
-    },
-    {
-      path: '/images',
-      element: <PageImages />
-    },
-    {
-      path: '/auth',
-      element: <PageAuth />
-    },
-    {
-      path: '/webauthn',
-      element: <PageWebauthn />
-    }
+    // {
+    //   path: '/',
+    //   element: <PageMain />
+    // }
   ])
 
   return (
-    <div className='bg-dark' style={{ width: '100vw', height: '100vh' }}>
+    <div>
       <RouterProvider router={router} />
     </div>
   )
