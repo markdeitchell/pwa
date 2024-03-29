@@ -1,5 +1,5 @@
-import log from "@/utils/log"
-import axios, { AxiosResponse } from "axios"
+import axios, { AxiosResponse } from 'axios'
+import log from '@/utils/log'
 
 export const post = async <T>(reqName: string, endpoint: string, data: object, auth: boolean | undefined = true): Promise<AxiosResponse<T>> => {
   log({ name: reqName, data, type: 'request' })

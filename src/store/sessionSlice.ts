@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import { initialStore } from './_initial'
 
 // export const asyncDeviceTokenDelete = createAsyncThunk(
@@ -18,20 +18,20 @@ export const sessionSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      // .addCase(asyncDeviceTokenCreate.pending, () => {
-      //   //00
-      // })
-      // .addCase(asyncDeviceTokenCreate.fulfilled, () => {
-      //   //00
-      // })
-      // .addCase(asyncDeviceTokenCreate.rejected, () => {
-      //   //00
-      // })
+    // .addCase(asyncDeviceTokenCreate.pending, () => {
+    //   //00
+    // })
+    // .addCase(asyncDeviceTokenCreate.fulfilled, () => {
+    //   //00
+    // })
+    // .addCase(asyncDeviceTokenCreate.rejected, () => {
+    //   //00
+    // })
   }
 })
 
-export const {
-  // clearPush
-} = sessionSlice.actions
+// export const {
+//   // clearPush
+// } = sessionSlice.actions
 
 export default sessionSlice.reducer

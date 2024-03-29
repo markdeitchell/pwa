@@ -1,4 +1,4 @@
-import { IRootData } from "./_RootData"
+// import { IRootData } from './_RootData'
 
 // export type TDeviceTokenCreate = IRootData<{}>
 

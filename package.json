@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@simplewebauthn/browser": "^9.0.1",
     "axios": "^1.6.7",
-    "bootstrap": "^5.3.3",
-    "firebase": "^10.8.1",
+    "clsx": "^2.1.0",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.0",
@@ -28,10 +27,8 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "dev": "craco start",
+    "dev": "DISABLE_ESLINT_PLUGIN=true craco start",
     "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint-fix": "eslint --ext .ts,.tsx,.js,.jsx . --fix"
   },

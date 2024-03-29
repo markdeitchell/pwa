@@ -1,0 +1,72 @@
+.ui-check {
+  position: relative;
+
+  &--error {
+    label {
+      &:before {
+        border-color: var(--red) !important;
+      }
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      &+label {
+        &:before {
+          background: var(--red);
+          border-color: var(--red);
+        }
+
+        &:after {
+          opacity: 1
+        }
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding-left: 33px;
+    cursor: pointer;
+    user-select: none;
+    font: 400 14px/18px var(--font);
+    color: var(--black);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid var(--lightGrey);
+      border-radius: 6px;
+      transition: .3s ease;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 5px;
+      width: 14px;
+      height: 10px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNSA0LjVMNS41IDguNUwxMi41IDEuNSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      transition: .3s ease
+    }
+
+    a {
+      display: inline;
+      color: #1842d2
+    }
+  }
+}

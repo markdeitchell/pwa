@@ -36,7 +36,6 @@ export function register(config?: Config) {
 
     window.addEventListener('load', () => {
       const swUrlPWA = `${process.env.PUBLIC_URL}/service-worker.js`
-      const swUrlFirebaseMessaging = `${process.env.PUBLIC_URL}/firebase-messaging-sw.js`
 
       if (isLocalhost) {
         // This is running on localhost. Let's check if a service worker still exists or not.
@@ -64,6 +63,7 @@ function registerValidSW(swUrl: string, config?: Config) {
     .then((registration) => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing
+        // eslint-disable-next-line
         if (installingWorker == null) {
           return
         }
@@ -112,6 +112,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       const contentType = response.headers.get('content-type')
       if (
         response.status === 404 ||
+        // eslint-disable-next-line
         (contentType != null && contentType.indexOf('javascript') === -1)
       ) {
         // No service worker found. Probably a different app. Reload the page.

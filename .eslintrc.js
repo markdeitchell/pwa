@@ -45,6 +45,7 @@ module.exports = {
     'no-useless-escape': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-unknown-property': 'off',
+    'react/display-name': 'off',
     'no-var': 1,
     'no-new-object': 1,
     'object-shorthand': 1,

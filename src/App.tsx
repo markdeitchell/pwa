@@ -1,24 +1,23 @@
-import React from 'react'
+import { Provider } from 'react-redux'
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { store } from '@/store/_store'
-import { Provider } from 'react-redux'
+import RouteMain from './components/routes/main'
+import 'normalize.css'
+import './utils/style/index.css'
 
 function App() {
   const router = createBrowserRouter([
-    // {
-    //   path: '/',
-    //   element: <PageMain />
-    // }
+    {
+      path: '/',
+      element: <RouteMain />
+    }
   ])
 
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <RouterProvider router={router} />
   )
 }
 
