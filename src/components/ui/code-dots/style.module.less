@@ -1,0 +1,83 @@
+.ui_codedots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  &-dot {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--lightGrey);
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform-origin: center center;
+      background: var(--black);
+      opacity: 0;
+    }
+
+    // &:before {
+
+    // }
+
+    // &:after {
+    //   opacity: 0;
+    // }
+
+    @keyframes filled {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(130%);
+      }
+
+      100% {
+        transform: scale(100%);
+      }
+    }
+
+    // @keyframes error {
+    //   50% {
+    //     background: var(--red);
+    //     transform: scale(120%);
+    //   }
+
+    //   100% {
+    //     background: var(--red);
+    //     transform: scale(0);
+    //   }
+    // }
+
+    &--filled {
+      &:before {
+        opacity: 1;
+        animation: .3s 1 normal filled;
+      }
+    }
+
+    &--error {
+      &:before {
+        // opacity: ;
+      }
+      &:after {
+        animation: .5s 1 error;
+      }
+    }
+
+    &--success {
+
+    }
+  }
+}

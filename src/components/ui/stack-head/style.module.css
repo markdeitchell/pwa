@@ -1,0 +1,64 @@
+.ui_stackhead {
+  position: relative;
+  padding: 10px 0;
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ui_stackhead-back {
+  position: absolute;
+  left: 17px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ui_stackhead-back svg {
+  width: 100%;
+  height: 100%;
+}
+.ui_stackhead-back svg path {
+  fill: var(--red);
+}
+.ui_stackhead-title {
+  max-width: 50%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  font: 600 18px/22px var(--font);
+  color: var(--black);
+  text-align: center;
+}
+.ui_stackhead-subtxt {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 18%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  font: 400 15px/16px var(--font);
+  color: var(--red);
+  text-align: right;
+}

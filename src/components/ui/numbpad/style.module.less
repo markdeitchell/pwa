@@ -1,0 +1,74 @@
+.ui_numbpad {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 232px;
+  height: 320px;
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-clm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+
+    &--touched {
+      &:before {
+        opacity: 1 !important;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background-color: var(--whiteGrey);
+      transition: .1s;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &-number {
+    position: relative;
+    z-index: 1;
+    font: 400 30px/36px var(--font);
+    color: var(--black);
+    user-select: none;
+  }
+
+  &-exit {
+    position: relative;
+    z-index: 1;
+    font: 400 15px/18px var(--font);
+    color: var(--black);
+    user-select: none;
+  }
+
+  &-delete {
+    position: relative;
+    z-index: 1;
+    transform: translate(0px, 4px);
+
+    svg {
+      path {
+        fill: var(--black);
+      }
+    }
+  }
+}

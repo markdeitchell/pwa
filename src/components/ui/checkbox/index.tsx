@@ -1,40 +1,23 @@
 import clsx from 'clsx'
-import { ChangeEvent, FC } from 'react'
-import { UseFormReturn } from 'react-hook-form'
+import { ChangeEvent, FC, ReactNode } from 'react'
 import style from './style.module.css'
+import { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form'
 
 interface IProps {
   id: string,
-  // form variant
-  isForm?: boolean,
-  value?: string,
-  register?: UseFormReturn['register'],
-  validation?: object,
-  error?: boolean,
-  // controlled variant
-  checked?: boolean | null,
+  value?: boolean,
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void,
-  // #####
-  defaultChecked?: boolean,
-  name?: string,
-  txt: string,
-  _style?: string
+  error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>>,
+  children: ReactNode
 }
 
 const Checkbox: FC<IProps> = (props) => {
   const {
     id,
-    register = () => { },
-    checked,
-    onChange,
-    validation,
-    error,
-    defaultChecked,
-    name,
-    isForm,
     value,
-    txt,
-    _style,
+    onChange,
+    error,
+    children
   } = props
 
   let customHandlers = {}
@@ -43,29 +26,15 @@ const Checkbox: FC<IProps> = (props) => {
   return (
     <div className={clsx(
       style['ui-check'],
-      _style && _style,
       error && style['ui-check--error']
     )}>
-      {isForm
-        ? <input
-          {...register(String(id), validation)}
-          defaultChecked={defaultChecked}
-          id={id}
-          type='checkbox'
-          value={value}
-          {...customHandlers}
-        />
-        : <input
-          checked={Boolean(checked)}
-          defaultChecked={defaultChecked}
-          id={id}
-          type='checkbox'
-          name={name}
-          value={value}
-          {...customHandlers}
-        />
-      }
-      <label htmlFor={id}>{txt}</label>
+      <input
+        id={id}
+        checked={Boolean(value)}
+        type='checkbox'
+        {...customHandlers}
+      />
+      <label htmlFor={id}>{children}</label>
     </div>
   )
 }

@@ -1,0 +1,55 @@
+.ui_stackhead {
+  position: relative;
+  padding: 10px 0;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-back {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: var(--red);
+      }
+    }
+  }
+
+  &-title {
+    max-width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    font: 600 18px/22px var(--font);
+    color: var(--black);
+    text-align: center;
+  }
+
+  &-subtxt {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 18%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    font: 400 15px/16px var(--font);
+    color: var(--red);
+    text-align: right;
+  }
+}

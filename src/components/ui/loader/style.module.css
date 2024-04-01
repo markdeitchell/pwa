@@ -1,0 +1,53 @@
+.ui_loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ui_loader-ico {
+  position: relative;
+  margin-bottom: 34px;
+  width: 38px;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid var(--lightGrey);
+  border-radius: 50%;
+}
+.ui_loader-ico svg {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 39px;
+  height: 39px;
+}
+.ui_loader-ico svg circle {
+  stroke: var(--red);
+}
+.ui_loader-title {
+  margin-bottom: 12px;
+  font: 600 18px/22px var(--font);
+  color: var(--black);
+  text-align: center;
+}
+.ui_loader-txt {
+  font: 400 15px/18px var(--font);
+  color: var(--darkGrey);
+  text-align: center;
+}
